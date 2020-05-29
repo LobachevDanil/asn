@@ -14,7 +14,6 @@ class ASInfo:
 
 def get_trace(addr):
     trace_list = []
-    is_finish = False
     is_successfully = False
     with Popen(['tracert', '-d', '-w', '1000', addr], stdin=PIPE, stdout=PIPE) as f:
         while True:
@@ -27,7 +26,6 @@ def get_trace(addr):
                 f.send_signal(signal.SIGTERM)
                 break
             trace_list.append(line)
-            print(line)
     return trace_list, is_successfully
 
 
@@ -52,15 +50,18 @@ def main():
         try:
             info = ipwhois.IPWhois(ip).lookup_whois()
             net = info['nets'][0]
-            a = ASInfo(ip, info['asn'], net['country'], net['description'])
-            result.append(a)
-            print(info)
+            provider = net['description'].replace('\n', ' ') if net['description'] is not None else '*'
+            tmp = ASInfo(ip, info['asn'], net['country'], provider)
+            result.append(tmp)
         except ipwhois.IPDefinedError:
-            result.append(ASInfo(ip, '', '', ''))
+            result.append(ASInfo(ip, '*', '*', '*'))
+    write_all(result)
 
-    print(trace)
-    print(ip_list)
-    print(result)
+
+def write_all(data):
+    print("{0:20} {1:10} {2:6} {3}".format('IP', 'AS', 'Country', 'Provider'))
+    for info in data:
+        print("{0:20} {1:10} {2:6} {3:}".format(info.ip, info.ans, info.country, info.provider))
 
 
 if __name__ == '__main__':
