@@ -1,14 +1,17 @@
-Не удалось достичь конечного узла
+Failed to reach the destination node
 IP                   AS         Country Provider
 192.168.1.1          *          *      *
 10.140.0.1           *          *      *
-85.235.63.164        25086      RU     Ural Telephone Company, Ekaterinburg
+85.235.63.162        25086      RU     Ural Telephone Company, Ekaterinburg
 212.188.18.130       8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel Smolenskaya-Sennaya Sq., 27-29 P.O. BOX 38  119121 Moscow, Russia
 212.188.29.249       8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel Moscow, Russia
+195.34.50.222        8359       RU     *
+195.34.50.238        8359       RU     *
+195.34.50.226        8359       RU     *
 212.188.29.85        8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel Moscow, Russia
 195.34.50.161        8359       RU     *
 72.14.223.74         15169      US     Google LLC
-108.170.250.113      15169      US     Google LLC
+108.170.250.51       15169      US     Google LLC
 216.239.50.44        15169      US     Google LLC
-74.125.253.94        15169      US     Google LLC
-172.253.70.47        15169      US     Google LLC
+216.239.57.222       15169      US     Google LLC
+216.239.42.21        15169      US     Google LLC

@@ -35,9 +35,9 @@ def main(args):
     ip_pattern = re.compile(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b")
     trace, flag = get_trace(args.address)
     if flag:
-        print("Конечный узел был достигнут")
+        print('The destination node was reached')
     else:
-        print("Не удалось достичь конечного узла")
+        print('Failed to reach the destination node')
 
     data = []
     for s in trace:
