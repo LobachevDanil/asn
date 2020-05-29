@@ -15,9 +15,10 @@ class ASInfo:
 def get_trace(addr):
     trace_list = []
     is_successfully = False
-    with Popen(['tracert', '-d', '-w', '1000', addr], stdin=PIPE, stdout=PIPE) as f:
+    with Popen(['tracert', '-d', '-w', '1000', addr], stdin=PIPE, stdout=PIPE, encoding='cp866') as f:
         while True:
-            line = str(f.stdout.readline(), 'cp866')
+            line = f.stdout.readline()
+            print(line)
             if not line or line.count('*') == 3:
                 f.send_signal(signal.SIGTERM)
                 break
