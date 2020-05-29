@@ -1,0 +1,16 @@
+Конечный узел был достигнут
+IP                   AS         Country Provider
+192.168.1.1          *          *      *
+10.140.0.1           *          *      *
+85.235.63.164        25086      RU     Ural Telephone Company, Ekaterinburg
+212.188.18.130       8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel Smolenskaya-Sennaya Sq., 27-29 P.O. BOX 38  119121 Moscow, Russia
+212.188.29.249       8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel Moscow, Russia
+212.188.29.85        8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel Moscow, Russia
+195.34.50.161        8359       RU     *
+195.34.53.112        8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel 27 Smolenskaya-Sennaya Sq., bld. 2 119121, Moscow Russia
+195.34.53.204        8359       RU     MTS / former ZAO MTU-Intel's p2p Network MTS / former ZAO MTU-Intel 27 Smolenskaya-Sennaya Sq., bld. 2 119121, Moscow Russia
+212.188.33.181       8359       RU     MTS's p2p Network Mobile TeleSystems PJSC, former ZAO MTU-Intel Smolenskaya-Sennaya Sq., 27/2 Moscow, Russia, 125315
+185.141.124.226      3267       RU     Russian Electronic School
+81.5.90.61           25100      RU     MIPT-TELECOM Network services ISP
+81.5.90.100          25100      RU     MIPT-TELECOM Network services ISP
+93.175.31.142        5467       RU     MIPT-TELECOM Network services ISP

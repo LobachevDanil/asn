@@ -1,3 +1,4 @@
+import argparse
 import re
 import signal
 from subprocess import Popen, PIPE
@@ -15,10 +16,10 @@ class ASInfo:
 def get_trace(addr):
     trace_list = []
     is_successfully = False
-    with Popen(['tracert', '-d', '-w', '1000', addr], stdin=PIPE, stdout=PIPE, encoding='cp866') as f:
+    with Popen(['tracert', '-d', '-w', '2000', addr], stdin=PIPE, stdout=PIPE, encoding='cp866') as f:
         while True:
             line = f.stdout.readline()
-            print(line)
+            # print(line)
             if not line or line.count('*') == 3:
                 f.send_signal(signal.SIGTERM)
                 break
@@ -31,9 +32,14 @@ def get_trace(addr):
 
 
 def main():
+    parser = argparse.ArgumentParser(description='AS script')
+    parser.add_argument('-a', '--address', type=str, action='store', default=input(),
+                        help='enter domain name or ip address')
+    args = parser.parse_args()
     ip_pattern = re.compile(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b")
+
     test = ['8.8.8.8', '172.253.70.47']
-    trace, flag = get_trace(test[0])
+    trace, flag = get_trace(args.address)
     if flag:
         print("Конечный узел был достигнут")
     else:
